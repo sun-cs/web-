@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #cfcfcf;
+        }
+
+        * {
+            padding: 0;
+            /*清楚原始边距，以防错误*/
+            margin: 0;
+        }
+
+        .box1 {
+            /*设置了box1*/
+            width: 410px;
+            height: 491px;
+            background-color: #ffff;
+            margin: 100px auto;
+        }
+
+        .pic img {
+            width: 410px;
+            /*设置图片的大小*/
+            height: 230px;
+        }
+
+        .review {
+            padding: 15px 20px;
+            /*设置了外边距，使其远离边框*/
+            /* margin: 10px 0 ;    设置了内边距，使其远离图片 */
+        }
+
+        .review h4,
+        .review em {
+            display: inline-block;
+        }
+
+        .review em {
+            font-style: inherit;
+            font-weight: 700;
+        }
+
+        .title1 {
+            padding: 15px 20px;
+        }
+
+        .info {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">
+        <div class="box1"> <!--设置了一个整体box1 -->
+            <div class="pic"><img src="图片/nvda1.jpeg" alt=""></div>
+            <div class="review">
+                <h4>汽车</h4>
+                <em>|</em>
+                <h4>公告</h4>
+            </div>
+            <div class="title1">
+                <h3>NVIDIA 与世界领先企业共同加速无人驾驶出租车的全球部署</h3>
+            </div>
+            <p class="info">
+                Stellantis、Lucid、梅赛德斯 - 奔驰、Waabi 和沃尔沃卡车采用 NVIDIA DRIVE AV 实现智能汽车的 L4 级部署。
+            </p>
+        </div>
+    </a>
+</body>
+
+</html>
