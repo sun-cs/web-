@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb_promo {
+            /*父相*/
+            position: relative;
+            width: 846px;
+            height: 472px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .tb_promo img {
+            width: 846px;
+            height: 472px;
+        }
+
+        /*层叠，并行两个内部代码相同的选择器*/
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -22px;
+            width: 30px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-decoration: none;
+            /*设置行高为设定的高度，会上下居中对齐*/
+            line-height: 44px;
+            text-align: center;
+        }
+
+        .prev {
+            /*子绝父相*/
+            /* position: absolute; */
+            left: 0;
+            /*垂直居中算法 注意margin为负数！！*/
+            /* top: 50%;
+            margin-top: -22px;
+            width: 30px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-decoration: none; */
+            /*设置行高为设定的高度，会上下居中对齐*/
+            /* line-height: 44px;
+            text-align: center; */
+            /*半圆的制作，让两个角等于半径(半径为高度的一半)*/
+            border-top-right-radius: 22px;
+            border-bottom-right-radius: 22px;
+        }
+
+        .next {
+            /*子绝父相*/
+            /* position: absolute; */
+            right: 0;
+            /*垂直居中算法 注意margin为负数！！*/
+            /* top: 50%;
+            margin-top: -22px;
+            width: 30px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-decoration: none;
+            /*设置行高为设定的高度，会上下居中对齐*/
+            /* line-height: 44px;
+            text-align: center; */
+            /*半圆的制作，让两个角等于半径(半径为高度的一半)*/
+            border-top-left-radius: 22px;
+            border-bottom-left-radius: 22px;
+        }
+
+        .promo_nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            /*最好不要有小数点*/
+            margin-left: -52px;
+            ;
+            width: 105px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .promo_nav li {
+            /*本来是垂直排列，浮动起来为水平排列*/
+            float: left;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            /*首先清楚格式，在最上层代码，li默认是小方块，设置为小圆点*/
+            border-radius: 50%;
+            /*让li小圆点上下左右相互隔开4px*/
+            margin: 4px;
+        }
+
+        /*不要忘记选择器权重问题*/
+        .promo_nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb_promo">
+        <img src="pink黑马前端/图片/tb_global.avif" alt="">
+        <!-- 左侧按钮箭头 -->
+        <a href="" class="prev"> &lt;</a>
+        <!-- 右侧按钮箭头 -->
+        <a href="" class="next"> &gt;</a>
+        <ul class="promo_nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
